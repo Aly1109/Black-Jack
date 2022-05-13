@@ -62,48 +62,61 @@ public class MyClass {
         
         ArrayList<Card> deck = new ArrayList<Card>();
         ArrayList<Card> discard = new ArrayList<Card>();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        deck.add();
-        
-        
-        
-        
+        deck.add(aceofhearts);
+        deck.add(aceofdiamonds);
+        deck.add(aceofspades);
+        deck.add(aceofclubs);
+        deck.add(kingofhearts);
+        deck.add(kingofdiamonds);
+        deck.add(kingofspades);
+        deck.add(kingofclubs);
+        deck.add(queenofhearts);
+        deck.add(queenofdiamonds);
+        deck.add(queenofspades);
+        deck.add(queenofclubs);
+        deck.add(jackofhearts);
+        deck.add(jackofdiamonds);
+        deck.add(jackofspades);
+        deck.add(jackofclubs);
+        deck.add(tenofhearts);
+        deck.add(tenofdiamonds);
+        deck.add(tenofspades);
+        deck.add(tenofclubs);
+        deck.add(nineofhearts);
+        deck.add(nineofdiamonds);
+        deck.add(nineofspades);
+        deck.add(nineofclubs);
+        deck.add(eightofhearts);
+        deck.add(eightofdiamonds);
+        deck.add(eightofspades);
+        deck.add(eightofclubs);
+        deck.add(sevenofhearts);
+        deck.add(sevenofdiamonds);
+        deck.add(sevenofspades);
+        deck.add(sevenofclubs);
+        deck.add(sixofhearts);
+        deck.add(sixofdiamonds);
+        deck.add(sixofspades);
+        deck.add(sixofclubs);
+        deck.add(fiveofhearts);
+        deck.add(fiveofdiamonds);
+        deck.add(fiveofspades);
+        deck.add(fiveofclubs);
+        deck.add(fourofhearts);
+        deck.add(fourofdiamonds);
+        deck.add(fourofspades);
+        deck.add(fourofclubs);
+        deck.add(threeofhearts);
+        deck.add(threeofdiamonds);
+        deck.add(threeofspades);
+        deck.add(threeofclubs);
+        deck.add(twoofhearts);
+        deck.add(twoofdiamonds);
+        deck.add(twoofspades);
+        deck.add(twoofclubs);
+
+
+
 
         Scanner s = new Scanner (System.in);
         int bet = 0;
