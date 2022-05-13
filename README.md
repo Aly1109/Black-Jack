@@ -2,6 +2,7 @@
 Best game you will ever see🤯
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class MyClass {
     public static void main(String args[]) {
@@ -57,10 +58,53 @@ public class MyClass {
         Card twoofdiamonds = new card(2,two,diamonds);
         Card twoofspades = new card(2,two,spades);
         Card twoofclubs = new card(2,two,clubs);
-    
-    
-    
-    
+        
+        
+        ArrayList<Card> deck = new ArrayList<Card>();
+        ArrayList<Card> discard = new ArrayList<Card>();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        deck.add();
+        
+        
+        
+        
+
         Scanner s = new Scanner (System.in);
         int bet = 0;
         System.out.println("how much are you betting?");
