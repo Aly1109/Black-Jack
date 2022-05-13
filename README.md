@@ -114,10 +114,18 @@ public class MyClass {
         deck.add(twoofdiamonds);
         deck.add(twoofspades);
         deck.add(twoofclubs);
-
-
-
-
+        
+        // shuffle  
+        for (int i=0; i<7; i++){
+            for (int j=0; j<deck.size(); j++){
+                int temp = deck.get(j);
+                int s=(Math.random()*52)+1
+                deck.set(j, list.get(s));
+                deck.set(s, temp)
+            }
+        }
+        
+        
         Scanner s = new Scanner (System.in);
         int bet = 0;
         System.out.println("how much are you betting?");
