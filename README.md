@@ -33,20 +33,30 @@ public class MyClass {
         Card eightofdiamonds = new card(8,eight,diamonds);
         Card eightofspades = new card(8,eight,spades);
         Card eightofclubs = new card(8,eight,clubs);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        Card sevenofhearts = new card(7,seven,hearts);
+        Card sevenofdiamonds = new card(7,seven,diamonds);
+        Card sevenofspades = new card(7,seven,spades);
+        Card sevenofclubs = new card(7,seven,clubs);    
+        Card sixofhearts = new card(6,six,hearts);
+        Card sixofdiamonds = new card(6,six,diamonds);
+        Card sixofspades = new card(6,six,spades);
+        Card sixofclubs = new card(6,six,clubs);
+        Card fiveofhearts = new card(5,ace,hearts);
+        Card fiveofdiamonds = new card(5,ace,diamonds);
+        Card fiveofspades = new card(5,ace,spades);
+        Card fiveofclubs = new card(5,ace,clubs);
+        Card fourofhearts = new card(4,four,hearts);
+        Card fourofdiamonds = new card(4,four,diamonds);
+        Card fourofspades = new card(4,four,spades);
+        Card fourofclubs = new card(4,four,clubs);
+        Card threeofhearts = new card(3,three,hearts);
+        Card threeofdiamonds = new card(3,three,diamonds);
+        Card threeofspades = new card(3,three,spades);
+        Card threeofclubs = new card(3,three,clubs);
+        Card twoofhearts = new card(2,two,hearts);
+        Card twoofdiamonds = new card(2,two,diamonds);
+        Card twoofspades = new card(2,two,spades);
+        Card twoofclubs = new card(2,two,clubs);
     
     
     
