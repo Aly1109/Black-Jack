@@ -1,6 +1,8 @@
 # Black-Jack
 Best game you will ever see🤯
 
+import java.util.Scanner;
+
 public class MyClass {
     public static void main(String args[]) {
     Card aceofhearts = new card(1,ace,hearts);
@@ -49,7 +51,10 @@ public class MyClass {
     
     
     
-    
+    Scanner s = new Scanner (System.in);
+        int bet = 0;
+        System.out.println("how much are you betting?");
+        bet=s.nextInt();
     
     
     
