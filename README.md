@@ -62,6 +62,8 @@ public class MyClass {
         
         ArrayList<Card> deck = new ArrayList<Card>();
         ArrayList<Card> discard = new ArrayList<Card>();
+        ArrayList<Card> playhand = new ArrayList<Card>();
+        ArrayList<Card> dealhand = new ArrayList<Card>();
         deck.add(aceofhearts);
         deck.add(aceofdiamonds);
         deck.add(aceofspades);
