@@ -132,9 +132,10 @@ public class MyClass {
         int bet = 0;
         System.out.println("how much are you betting?");
         bet=s.nextInt();
-    
-    
-    
+        for (int i = 0 ; i < playerhand.size(); i++)
+    {
+       System.out.println(playerhand.get(i).getName())
+        
     }
 
 
