@@ -62,8 +62,8 @@ public class MyClass {
         
         ArrayList<Card> deck = new ArrayList<Card>();
         ArrayList<Card> discard = new ArrayList<Card>();
-        ArrayList<Card> playhand = new ArrayList<Card>();
-        ArrayList<Card> dealhand = new ArrayList<Card>();
+        ArrayList<Card> playerhand = new ArrayList<Card>();
+        ArrayList<Card> dealerhand = new ArrayList<Card>();
         deck.add(aceofhearts);
         deck.add(aceofdiamonds);
         deck.add(aceofspades);
@@ -132,15 +132,21 @@ public class MyClass {
         int bet = 0;
         System.out.println("how much are you betting?");
         bet=s.nextInt();
+        draw(deck,playerhand);
+        draw(deck,playerhand);
+        
         for (int i = 0 ; i < playerhand.size(); i++)
     {
-       System.out.println(playerhand.get(i).getName())
+       System.out.println(playerhand.get(i).getName());
         
     }
 
 
 
-
+public static void draw(ArrayList<Card> from, ArrayList<Card> to){
+          to.add(from.get(0));
+          from.remove(0);
+      }
 
 
 }
