@@ -129,6 +129,19 @@ public class MyClass {
         
         
         Scanner s = new Scanner (System.in);
+        int startingCash=0;
+        System.out.println("how much mouny are you starting with");
+        startingCash=s.nextInt();
+        playHand(startingCash);
+}
+// moves cards from one plase to another 
+    public static void draw(ArrayList<Card> from, ArrayList<Card> to){
+          to.add(from.get(0));
+          from.remove(0);
+    }
+    
+    // plays a hand of poker
+    public static void playHand(int startingM){
         int bet = 0;
         System.out.println("how much are you betting?");
         bet=s.nextInt();
@@ -136,17 +149,11 @@ public class MyClass {
         draw(deck,playerhand);
         
         for (int i = 0 ; i < playerhand.size(); i++)
-    {
-       System.out.println(playerhand.get(i).getName());
+        {
+            System.out.println(playerhand.get(i).getName());
         
-    }
-
-}
-
-public static void draw(ArrayList<Card> from, ArrayList<Card> to){
-          to.add(from.get(0));
-          from.remove(0);
-      }
+        }
+    } 
 
 
 }
@@ -166,3 +173,4 @@ public class Card{
         return Type +" of " + Suit;
     }
 }
+
