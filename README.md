@@ -132,7 +132,14 @@ public class MyClass {
         int startingCash=0;
         System.out.println("how much mouny are you starting with");
         startingCash=s.nextInt();
-        playHand(startingCash);
+        int bet = 1;
+        while (bet!=0){
+           System.out.println("how much are you betting?");
+           bet=s.nextInt();
+           if (bet!=0){
+            playHand(bet);
+           }
+         }
 }
 // moves cards from one plase to another 
     public static void draw(ArrayList<Card> from, ArrayList<Card> to){
@@ -142,9 +149,7 @@ public class MyClass {
     
     // plays a hand of poker
     public static void playHand(int startingM){
-        int bet = 0;
-        System.out.println("how much are you betting?");
-        bet=s.nextInt();
+    
         draw(deck,playerhand);
         draw(deck,playerhand);
         
