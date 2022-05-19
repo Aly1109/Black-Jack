@@ -134,21 +134,35 @@ public class MyClass {
         startingCash=s.nextInt();
         int bet = 1;
         while (bet!=0){
+            int totval=playerhand.get(0).getValue()+playerhand.get(1).getValue();
            System.out.println("how much are you betting? if you whant to stop enter 0");
            bet=s.nextInt();
            if (bet!=0){
-            draw(deck,playerhand);
-            draw(deck,playerhand);
-            System.out.println("in your hand you have");
-        
-            for (int i = 0 ; i < playerhand.size(); i++)
-            {
-                System.out.println(playerhand.get(i).getName());
-        
+               draw(deck,playerhand);
+               draw(deck,playerhand);
+               System.out.println("in your hand you have");
+               for (int i = 0 ; i < playerhand.size(); i++){
+                   System.out.println(playerhand.get(i).getName());
+                   
+               }
+               String x;
+               while(!(x.equals("stand"))){
+                   int c=1;
+                   System.out.println ("do you whant to hit or stand?");
+                   x=s.nextLine;
+                if(x.equals("hit")){
+                    c++;
+                    draw(deck,playerhand);
+                    System.out.println("you drew a " + playerhand.get(c).getName());
+                    totval+=playerhand.get(c).getValue();
+                    if (totval>21){
+                        x=stand;
+                        system.out.println("bust");
+                    }
+                }
             }
-            
            }
-         }
+        }
 }
 // moves cards from one plase to another 
     public static void draw(ArrayList<Card> from, ArrayList<Card> to){
@@ -176,5 +190,4 @@ public class Card{
         return Type +" of " + Suit;
     }
 }
-
 
