@@ -139,6 +139,7 @@ public class MyClass {
            if (bet!=0){
             draw(deck,playerhand);
             draw(deck,playerhand);
+            System.out.println("in your hand you have");
         
             for (int i = 0 ; i < playerhand.size(); i++)
             {
