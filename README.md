@@ -134,20 +134,23 @@ public class MyClass {
         startingCash=s.nextInt();
         int bet = 1;
         while (bet!=0){
-            int totval=playerhand.get(0).getValue()+playerhand.get(1).getValue();
            System.out.println("how much are you betting? if you whant to stop enter 0");
            bet=s.nextInt();
            if (bet!=0){
                draw(deck,playerhand);
                draw(deck,playerhand);
+               draw(deck,dealerhand);
+               draw(deck,dealerhand);
+               int totval=playerhand.get(0).getValue()+playerhand.get(1).getValue();
+               System.out.println("the dealer top card is "+dealerhand.get(0).getName());
                System.out.println("in your hand you have");
                for (int i = 0 ; i < playerhand.size(); i++){
                    System.out.println(playerhand.get(i).getName());
                    
                }
                String x;
+               int c=1;
                while(!(x.equals("stand"))){
-                   int c=1;
                    System.out.println ("do you whant to hit or stand?");
                    x=s.nextLine;
                 if(x.equals("hit")){
@@ -156,7 +159,7 @@ public class MyClass {
                     System.out.println("you drew a " + playerhand.get(c).getName());
                     totval+=playerhand.get(c).getValue();
                     if (totval>21){
-                        x=stand;
+                        x="stand";
                         system.out.println("bust");
                     }
                 }
@@ -190,4 +193,3 @@ public class Card{
         return Type +" of " + Suit;
     }
 }
-
