@@ -134,10 +134,18 @@ public class MyClass {
         startingCash=s.nextInt();
         int bet = 1;
         while (bet!=0){
-           System.out.println("how much are you betting?");
+           System.out.println("how much are you betting? if you whant to stop enter 0");
            bet=s.nextInt();
            if (bet!=0){
-            playHand(bet);
+            draw(deck,playerhand);
+            draw(deck,playerhand);
+        
+            for (int i = 0 ; i < playerhand.size(); i++)
+            {
+                System.out.println(playerhand.get(i).getName());
+        
+            }
+            
            }
          }
 }
@@ -147,18 +155,7 @@ public class MyClass {
           from.remove(0);
     }
     
-    // plays a hand of poker
-    public static void playHand(int startingM){
-    
-        draw(deck,playerhand);
-        draw(deck,playerhand);
-        
-        for (int i = 0 ; i < playerhand.size(); i++)
-        {
-            System.out.println(playerhand.get(i).getName());
-        
-        }
-    } 
+
 
 
 }
