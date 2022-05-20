@@ -121,9 +121,9 @@ public class MyClass {
         for (int i=0; i<7; i++){
             for (int j=0; j<deck.size(); j++){
                 Card temp = deck.get(j);
-                int s=(Math.random()*52)+1;
-                deck.set(j, deck.get(s));
-                deck.set(s, temp);
+                int we=(int)(Math.random()*52)+1;
+                deck.set(j, deck.get(we));
+                deck.set(we, temp);
             }
         }
         
@@ -148,25 +148,38 @@ public class MyClass {
                    System.out.println(playerhand.get(i).getName());
                    
                }
-               String x;
+               String x="";
                int c=1;
                while(!(x.equals("stand"))){
                    System.out.println ("do you whant to hit or stand?");
-                   x=s.nextLine;
-                if(x.equals("hit")){
-                    c++;
-                    draw(deck,playerhand);
-                    System.out.println("you drew a " + playerhand.get(c).getName());
-                    totval+=playerhand.get(c).getValue();
-                    if (totval>21){
-                        x="stand";
-                        system.out.println("bust");
-                    }
-                }
-            }
+                   x=s.nextLine();
+                   if(x.equals("hit")){
+                       c++;
+                       draw(deck,playerhand);
+                       System.out.println("you drew a " + playerhand.get(c).getName());
+                       totval+=playerhand.get(c).getValue();
+                       if (totval>21){                       // if bust
+                           x="stand";
+                           System.out.println("bust");
+                           startingCash-=bet;
+                       }
+                       
+                   }
+                   
+               }
+               System.out.println("the dealer second card is "+dealerhand.get(1).getName());
+               int dealerstotal=dealerhand.get(0).getValue()+dealerhand.get(1).getValue();
+               while (dealerstotal<17){
+                   dealerstotal+=deck.get(0).getValue();
+                   System.out.println("the dealer draws a "+ deck.get(0).getName());
+                   draw(deck,dealerhand);
+               }
+               
            }
+            
         }
-}
+        
+    }
 // moves cards from one plase to another 
     public static void draw(ArrayList<Card> from, ArrayList<Card> to){
           to.add(from.get(0));
@@ -177,7 +190,7 @@ public class MyClass {
 
 
 }
-public class Card{
+class Card{
     private int Value; 
     private String Type;
     private String Suit; 
