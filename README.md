@@ -121,7 +121,7 @@ public class MyClass {
         for (int i=0; i<7; i++){
             for (int j=0; j<deck.size(); j++){
                 Card temp = deck.get(j);
-                int we=(int)(Math.random()*52)+1;
+                int we=(int)(Math.random()*52);
                 deck.set(j, deck.get(we));
                 deck.set(we, temp);
             }
