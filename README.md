@@ -167,14 +167,18 @@ public class MyClass {
                    }
                    
                }
-               System.out.println("the dealer second card is "+dealerhand.get(1).getName());
-               int dealerstotal=dealerhand.get(0).getValue()+dealerhand.get(1).getValue();
-               while (dealerstotal<17){
-                   dealerstotal+=deck.get(0).getValue();
-                   System.out.println("the dealer draws a "+ deck.get(0).getName());
-                   draw(deck,dealerhand);
+               if (totval<22){
+                    System.out.println("the dealer second card is "+dealerhand.get(1).getName());
+                    int dealerstotal=dealerhand.get(0).getValue()+dealerhand.get(1).getValue();
+                    while (dealerstotal<17){
+                        dealerstotal+=deck.get(0).getValue();
+                        System.out.println("the dealer draws a "+ deck.get(0).getName());
+                        draw(deck,dealerhand);
+                    }
+                   
                }
                
+                
            }
             
         }
