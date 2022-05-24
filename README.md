@@ -129,12 +129,13 @@ public class MyClass {
         
         
         Scanner s = new Scanner (System.in);
-        int startingCash=0;
+        double startingCash=0.0;
         System.out.println("how much mouny are you starting with");
-        startingCash=s.nextInt();
+        startingCash=s.nextDouble();
         int bet = 1;
+    
         while (bet!=0){
-           System.out.println("how much are you betting? if you whant to stop enter 0");
+           System.out.println("how much are you betting? if you want to stop enter 0");
            bet=s.nextInt();
            if (bet!=0){
                draw(deck,playerhand);
@@ -151,20 +152,29 @@ public class MyClass {
                String x="";
                int c=1;
                while(!(x.equals("stand"))){
-                   System.out.println ("do you whant to hit or stand?");
-                   x=s.nextLine();
-                   if(x.equals("hit")){
-                       c++;
-                       draw(deck,playerhand);
-                       System.out.println("you drew a " + playerhand.get(c).getName());
-                       totval+=playerhand.get(c).getValue();
-                       if (totval>21){                       // if bust
-                           x="stand";
-                           System.out.println("bust");
-                           startingCash-=bet;
-                       }
-                       
+                   if (playerhand.get(0).getValue()+playerhand.get(1).getValue()==21 && dealerhand.get(0).getValue()+dealerhand.get(1).getValue()!=21){
+                       x="stand";
+                       startingCash+= (((double)bet*3)/2);
+                       System.out.println("you got a natural");
                    }
+                    else{
+                        System.out.println ("do you want to hit or stand?");
+                        x=s.nextLine();
+                        if(x.equals("hit")){
+                            c++;
+                            draw(deck,playerhand);
+                            System.out.println("you drew a " + playerhand.get(c).getName());
+                            totval+=playerhand.get(c).getValue();
+                       
+                        if (totval>21){                       // if bust
+                            x="stand";
+                            System.out.println("bust");
+                            startingCash-=bet;
+                        }
+                       
+                        }
+                    }
+                   
                    
                }
                if (totval<22){
