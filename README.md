@@ -151,7 +151,9 @@ public class MyClass {
                }
                String x="";
                int c=1;
+               int wq=0;
                while(!(x.equals("stand"))){
+                   // natiral
                    if (playerhand.get(0).getValue()+playerhand.get(1).getValue()==21 && dealerhand.get(0).getValue()+dealerhand.get(1).getValue()!=21){
                        x="stand";
                        startingCash+= (((double)bet*3)/2);
@@ -167,6 +169,15 @@ public class MyClass {
                             totval+=playerhand.get(c).getValue();
                        
                         if (totval>21){                       // if bust
+                            for (int qw=wq; qw<c; qw++){
+                                if (playerhand.get(qw).getValue()==11){
+                                    System.out.println("do you want your " + playerhand.get(c).getName()+ "to be worth 1 point if so type y if no type n");
+                                    String reduse =s.nextLine();
+                                    if(reduse.equals("y")){
+                                        totval-=10;
+                                    }
+                                }
+                            }
                             x="stand";
                             System.out.println("bust");
                             startingCash-=bet;
