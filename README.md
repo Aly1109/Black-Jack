@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class MyClass {
     public static void main(String args[]) {
-        Card aceofhearts = new Card(1,"ace","hearts");
-        Card aceofdiamonds = new Card(1,"ace","diamonds");
-        Card aceofspades = new Card(1,"ace","spades");
-        Card aceofclubs = new Card(1,"ace","clubs");
+        Card aceofhearts = new Card(11,"ace","hearts");
+        Card aceofdiamonds = new Card(11,"ace","diamonds");
+        Card aceofspades = new Card(11,"ace","spades");
+        Card aceofclubs = new Card(11,"ace","clubs");
         Card kingofhearts = new Card(10,"king","hearts");
         Card kingofdiamonds = new Card(10,"king","diamonds");
         Card kingofspades = new Card(10,"king","spades");
