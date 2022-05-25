@@ -158,6 +158,8 @@ public class MyClass {
                        x="stand";
                        startingCash+= (((double)bet*3)/2);
                        System.out.println("you got a natural");
+                       System.out.println("your new balence is "+ startingCash);
+                       
                    }
                     else{
                         System.out.println ("do you want to hit or stand?");
@@ -181,6 +183,7 @@ public class MyClass {
                             x="stand";
                             System.out.println("bust");
                             startingCash-=bet;
+                            System.out.println("your new balence is "+ startingCash);
                         }
                        
                         }
@@ -196,7 +199,11 @@ public class MyClass {
                         System.out.println("the dealer draws a "+ deck.get(0).getName());
                         draw(deck,dealerhand);
                     }
-                   
+                    if (dealerstotal>totval && dealerstotal<22){
+                        startingCash-=bet;
+                        System.out.println("you lost your new balence is "+ startingCash);
+                    }
+                    
                }
                
                 
