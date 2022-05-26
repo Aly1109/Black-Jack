@@ -158,7 +158,7 @@ public class MyClass {
                        x="stand";
                        startingCash+= (((double)bet*3)/2);
                        System.out.println("you got a natural");
-                       System.out.println("your new balence is "+ startingCash);
+                       System.out.println("your new balance is "+ startingCash);
                        
                    }
                     else{
@@ -183,7 +183,7 @@ public class MyClass {
                             x="stand";
                             System.out.println("bust");
                             startingCash-=bet;
-                            System.out.println("your new balence is "+ startingCash);
+                            System.out.println("your new balance is "+ startingCash);
                         }
                        
                         }
@@ -201,9 +201,19 @@ public class MyClass {
                     }
                     if (dealerstotal>totval && dealerstotal<22){
                         startingCash-=bet;
-                        System.out.println("you lost your new balence is "+ startingCash);
+                        System.out.println("you lost your new balance is "+ startingCash);
                     }
-                    
+                    if (dealerstotal<totval){
+                        startingCash+=bet;
+                        System.out.println("you won your new balance is "+ startingCash);
+                    }
+                    if (dealerstotal==totval){
+                        System.out.println("it's a tie your curent balance is "+ startingCash);
+                    }
+                    if (dealerstotal>21){
+                        startingCash+=bet;
+                        System.out.println("dealer busts you win your new balence is "+startingCash);
+                    }
                }
                
                 
