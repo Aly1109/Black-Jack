@@ -173,7 +173,7 @@ public class MyClass {
                         if (totval>21){                       // if bust
                             for (int qw=wq; qw<c; qw++){
                                 if (playerhand.get(qw).getValue()==11){
-                                    System.out.println("do you want your " + playerhand.get(c).getName()+ "to be worth 1 point if so type y if no type n");
+                                    System.out.println("do you want your " + playerhand.get(qw).getName()+ "to be worth 1 point if so type y if no type n");
                                     String reduce =s.nextLine();
                                     if(reduce.equals("y")){
                                         totval-=10;
@@ -215,10 +215,10 @@ public class MyClass {
                         System.out.println("dealer busts you win your new balance is "+startingCash);
                     }
                 }
-                while(playerhand.getSize()!=0){
+                while(playerhand.size()!=0){
                     draw(playerhand,discard);
                 }
-                while(dealerhand.getSize()!=0){
+                while(dealerhand.size()!=0){
                     draw(dealerhand,discard);
                 }
            }
