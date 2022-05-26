@@ -171,7 +171,7 @@ public class MyClass {
                             totval+=playerhand.get(c).getValue();
                        
                         if (totval>21){                       // if bust
-                            for (int qw=wq; qw<c; qw++){
+                            for (int qw=wq; qw<=c; qw++){
                                 if (playerhand.get(qw).getValue()==11){
                                     System.out.println("do you want your " + playerhand.get(qw).getName()+ " to be worth 1 point if so type y if no type n");
                                     String reduce =s.nextLine();
