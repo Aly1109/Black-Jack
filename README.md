@@ -214,9 +214,13 @@ public class MyClass {
                         startingCash+=bet;
                         System.out.println("dealer busts you win your new balance is "+startingCash);
                     }
-               }
-               
-                
+                }
+                while(playerhand.getSize()!=0){
+                    draw(playerhand,discard);
+                }
+                while(dealerhand.getSize()!=0){
+                    draw(dealerhand,discard);
+                }
            }
             
         }
