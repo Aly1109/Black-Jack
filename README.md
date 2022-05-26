@@ -174,8 +174,8 @@ public class MyClass {
                             for (int qw=wq; qw<c; qw++){
                                 if (playerhand.get(qw).getValue()==11){
                                     System.out.println("do you want your " + playerhand.get(c).getName()+ "to be worth 1 point if so type y if no type n");
-                                    String reduse =s.nextLine();
-                                    if(reduse.equals("y")){
+                                    String reduce =s.nextLine();
+                                    if(reduce.equals("y")){
                                         totval-=10;
                                     }
                                 }
@@ -212,7 +212,7 @@ public class MyClass {
                     }
                     if (dealerstotal>21){
                         startingCash+=bet;
-                        System.out.println("dealer busts you win your new balence is "+startingCash);
+                        System.out.println("dealer busts you win your new balance is "+startingCash);
                     }
                }
                
