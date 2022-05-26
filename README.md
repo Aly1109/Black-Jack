@@ -173,17 +173,20 @@ public class MyClass {
                         if (totval>21){                       // if bust
                             for (int qw=wq; qw<c; qw++){
                                 if (playerhand.get(qw).getValue()==11){
-                                    System.out.println("do you want your " + playerhand.get(qw).getName()+ "to be worth 1 point if so type y if no type n");
+                                    System.out.println("do you want your " + playerhand.get(qw).getName()+ " to be worth 1 point if so type y if no type n");
                                     String reduce =s.nextLine();
                                     if(reduce.equals("y")){
                                         totval-=10;
                                     }
                                 }
                             }
-                            x="stand";
-                            System.out.println("bust");
-                            startingCash-=bet;
-                            System.out.println("your new balance is "+ startingCash);
+                            if (totval>21){
+                                x="stand";
+                                System.out.println("bust");
+                                startingCash-=bet;
+                                System.out.println("your new balance is "+ startingCash);
+                            }
+                            
                         }
                        
                         }
