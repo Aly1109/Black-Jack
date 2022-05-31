@@ -258,6 +258,7 @@ public class MyClass {
                 deck.set(weeeeeeeeeeeeee, temp);
             }
         }
+        System.out.println("deck got shuffeled");
     }
     
 
