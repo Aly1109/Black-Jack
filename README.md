@@ -118,14 +118,7 @@ public class MyClass {
         deck.add(twoofclubs);
         
         // shuffle  
-        for (int i=0; i<7; i++){
-            for (int j=0; j<deck.size(); j++){
-                Card temp = deck.get(j);
-                int we=(int)(Math.random()*52);
-                deck.set(j, deck.get(we));
-                deck.set(we, temp);
-            }
-        }
+        shuffle(deck, discard);
         
         
         Scanner s = new Scanner (System.in);
@@ -138,13 +131,25 @@ public class MyClass {
            System.out.println("how much are you betting? if you want to stop enter 0");
            bet=s.nextInt();
            if (bet!=0){
+               if (deck.size()==0){
+                   shuffle(deck, discard);
+               }
                draw(deck,playerhand);
+               if (deck.size()==0){
+                   shuffle(deck, discard);
+               }
                draw(deck,playerhand);
+               if (deck.size()==0){
+                   shuffle(deck, discard);
+               }
                draw(deck,dealerhand);
+               if (deck.size()==0){
+                   shuffle(deck, discard);
+               }
                draw(deck,dealerhand);
                int totval=playerhand.get(0).getValue()+playerhand.get(1).getValue();
                System.out.println("the dealer top card is "+dealerhand.get(0).getName());
-               System.out.println("in your hand you have");
+               System.out.println("in your hand you have it is worth "+totval+" points");
                for (int i = 0 ; i < playerhand.size(); i++){
                    System.out.println(playerhand.get(i).getName());
                    
@@ -162,10 +167,13 @@ public class MyClass {
                        
                    }
                     else{
-                        System.out.println ("do you want to hit or stand?");
+                        System.out.println ("your point total is "+ totval+" do you want to hit or stand?");
                         x=s.nextLine();
                         if(x.equals("hit")){
                             c++;
+                            if (deck.size()==0){
+                            shuffle(deck, discard);
+                            }
                             draw(deck,playerhand);
                             System.out.println("you drew a " + playerhand.get(c).getName());
                             totval+=playerhand.get(c).getValue();
@@ -173,7 +181,7 @@ public class MyClass {
                         if (totval>21){                       // if bust
                             for (int qw=wq; qw<=c; qw++){
                                 if (playerhand.get(qw).getValue()==11){
-                                    System.out.println("do you want your " + playerhand.get(qw).getName()+ " to be worth 1 point if so type y if no type n");
+                                    System.out.println("your point total is "+ totval+" do you want your " + playerhand.get(qw).getName()+ " to be worth 1 point if so type y if no type n");
                                     String reduce =s.nextLine();
                                     if(reduce.equals("y")){
                                         totval-=10;
@@ -200,6 +208,9 @@ public class MyClass {
                     while (dealerstotal<17){
                         dealerstotal+=deck.get(0).getValue();
                         System.out.println("the dealer draws a "+ deck.get(0).getName());
+                        if (deck.size()==0){
+                        shuffle(deck, discard);
+                        }
                         draw(deck,dealerhand);
                     }
                     if (dealerstotal>totval && dealerstotal<22){
@@ -233,6 +244,20 @@ public class MyClass {
     public static void draw(ArrayList<Card> from, ArrayList<Card> to){
           to.add(from.get(0));
           from.remove(0);
+    }
+    // shuffle
+    public static void shuffle(ArrayList<Card> deck , ArrayList<Card> discard){
+        while (discard.size()!=0){
+            draw(discard, deck);
+        }
+        for (int i=0; i<7; i++){
+            for (int j=0; j<deck.size(); j++){
+                Card temp = deck.get(j);
+                int weeeeeeeeeeeeee=(int)(Math.random()*52);
+                deck.set(j, deck.get(weeeeeeeeeeeeee));
+                deck.set(weeeeeeeeeeeeee, temp);
+            }
+        }
     }
     
 
