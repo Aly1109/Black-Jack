@@ -130,7 +130,7 @@ public class MyClass {
         
         Scanner s = new Scanner (System.in);
         double startingCash=0.0;
-        System.out.println("how much mouny are you starting with");
+        System.out.println("how much money are you starting with");
         startingCash=s.nextDouble();
         int bet = 1;
     
